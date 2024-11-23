@@ -1,0 +1,133 @@
+---
+import DashboardHeader from "../components/Dashboard/DashboardHeader.astro";
+import DashboardContainer from "../components/Dashboard/Dashboard.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class="">
+    <DashboardHeader />
+
+    <DashboardContainer>
+      <!-- form -->
+      <form class="max-w-2xl mx-auto py-24 px-8">
+        <div class="space-y-12">
+          <div class="border-b border-gray-900/10 pb-12">
+            <h2 class="text-xl font-semibold">New Event</h2>
+
+            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+              <div class="sm:col-span-full">
+                <label
+                  for="organizer__name"
+                  class="label"
+                >
+                  Event Title
+                </label>
+                <div class="mt-2">
+                  <div class="rounded-lg shadow-sm">
+                    <input
+                      type="text"
+                      name="event__title"
+                      id="eventTitle"
+                      autocomplete="event__title"
+                      class="block w-full input"
+                      placeholder="Enter the event title."
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="sm:col-span-full w-full">
+                <label
+                  for="event__description"
+                  class="label"
+                >
+                  Event Description
+                </label>
+                <div class="mt-2">
+                  <div class="flex rounded-lg shadow-sm">
+                    <textarea
+                      rows="10"
+                      cols="20"
+                      name="event__description"
+                      id="eventDecription"
+                      class="block flex-1 input"
+                      placeholder="Enter the description"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-span-full">
+                <label
+                  for="HeadlineAct"
+                  class="label"
+                >
+                  Select Organizer
+                </label>
+
+                <select
+                  name="organizer"
+                  id="organizer"
+                  class="mt-2 w-full text-sm rounded-lg border-gray-300"
+                >
+                  <option value="">Please select</option>
+                  <option value="JM">John Mayer</option>
+                  <option value="SRV">Stevie Ray Vaughn</option>
+                  <option value="JH">Jimi Hendrix</option>
+                  <option value="BBK">B.B King</option>
+                  <option value="AK">Albert King</option>
+                  <option value="BG">Buddy Guy</option>
+                  <option value="EC">Eric Clapton</option>
+                </select>
+              </div>
+
+              <div class="col-span-full">
+                <label for="photo" class="label">
+                  Cover Photo
+                </label>
+                <div class="mt-2 flex items-center gap-x-3">
+                  <svg
+                    class="size-12 text-gray-300"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    data-slot="icon"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+
+                  <div class="flex items-center">
+                    <label
+                      class="block mb-2 text-sm font-medium text-gray-900"
+                      for="image__upload">Upload file</label
+                    >
+                    <input
+                      class="block w-full text-sm input cursor-pointer"
+                      aria-describedby="image__upload"
+                      id="user_avatar"
+                      type="file"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 flex items-center justify-end gap-x-6">
+          <button type="button" class="text-sm font-semibold">Cancel</button>
+          <button type="submit" class="text-sm btn btn-accent">Save</button>
+        </div>
+      </form>
+    </DashboardContainer>
+  </body>
+</html>

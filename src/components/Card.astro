@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import card from "../assets/hero.jpg";
+---
+
+<div class="rounded-lg border border-gray-200 grid h-[40rem]">
+  <!-- header -->
+  <div
+    class="px-4 py-2 text-gray-500 border-2 border-white rounded-lg bg-neutral-100/60 w-full flex justify-between items-center"
+  >
+    <h4 id="date" class="font-light text-sm sm:text-base tracking-wide">
+      01/01/24
+    </h4>
+
+    <h3 id="gonna-be-custom-title" class="tracking-tight">
+      <a href="#" class="link hover:text-sky-600"> Pancho's Drink House </a>
+    </h3>
+  </div>
+
+  <Image
+    class="object-cover h-72 rounded-lg w-full"
+    src={card}
+    alt="Custom card"
+  />
+
+  <!-- Description -->
+  <div class="p-4 space-y-5 text-center sm:text-start">
+    <h2 class="hover:text-sky-500 text-3xl font-extrabold leading-7 tracking-wide">
+      <a class="hover:underline" href=""> Two For One Drinks </a>
+    </h2>
+
+    <!-- 200 char limit -->
+    <p class="leading-5 text-gray-600">
+      This is more thank likely going to be limited to a certain amount of
+      characters I’m thinking maybe 120 characters. Need count it in
+      development. sdklfja fjf lkfkl jfklj jlkasd lksd jf
+    </p>
+
+    <!-- Here goes the filter -->
+    <button class="mt-auto btn btn-accent"> Food & Drink </button>
+  </div>
+</div>
