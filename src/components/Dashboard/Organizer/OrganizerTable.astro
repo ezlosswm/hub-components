@@ -1,18 +1,23 @@
-<table class="text-center w-full table-auto">
+---
+import { Image } from "astro:assets";
+import pic from "../../../assets/hero.jpg";
+---
+
+<table class="w-full table-auto">
   <thead>
     <tr>
-      <th> Event Title </th>
-      <th> Oranizer </th>
-      <th> Start Date </th>
-      <th> </th>
+      <th class="border-r p-1"> Image </th>
+      <th class="border-r p-1"> Oranizer </th>
+      <th class="border-r p-1"> </th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td> Two For One Drinks </td>
-      <td> Pancho's Drink House </td>
-      <td> 01/01/24 </td>
-      <td>
+      <td class="p-1">
+        <Image class="mx-auto size-12 rounded-full" src={pic} alt="Bubble" />
+      </td>
+      <td class="p-1"> Pancho's Drink House </td>
+      <td class="p-1">
         <span
           class="inline-flex overflow-hidden rounded-md border bg-white shadow-sm"
         >

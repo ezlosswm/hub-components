@@ -25,7 +25,7 @@ import DashboardContainer from "../components/Dashboard/Dashboard.astro";
               <div class="sm:col-span-full">
                 <label
                   for="organizer__name"
-                  class="label"
+                  class="block mb-2 text-sm sm:text-base font-medium"
                 >
                   Event Title
                 </label>
@@ -36,7 +36,7 @@ import DashboardContainer from "../components/Dashboard/Dashboard.astro";
                       name="event__title"
                       id="eventTitle"
                       autocomplete="event__title"
-                      class="block w-full input"
+                      class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-2 pl-2 placeholder:text-gray-400 sm:text-sm"
                       placeholder="Enter the event title."
                     />
                   </div>
@@ -46,7 +46,7 @@ import DashboardContainer from "../components/Dashboard/Dashboard.astro";
               <div class="sm:col-span-full w-full">
                 <label
                   for="event__description"
-                  class="label"
+                  class="block mb-2 text-sm sm:text-base font-medium"
                 >
                   Event Description
                 </label>
@@ -57,7 +57,7 @@ import DashboardContainer from "../components/Dashboard/Dashboard.astro";
                       cols="20"
                       name="event__description"
                       id="eventDecription"
-                      class="block flex-1 input"
+                      class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-2 pl-2 placeholder:text-gray-400 sm:text-sm flex-1"
                       placeholder="Enter the description"></textarea>
                   </div>
                 </div>
@@ -66,7 +66,7 @@ import DashboardContainer from "../components/Dashboard/Dashboard.astro";
               <div class="col-span-full">
                 <label
                   for="HeadlineAct"
-                  class="label"
+                  class="block mb-2 text-sm sm:text-base font-medium"
                 >
                   Select Organizer
                 </label>
@@ -88,7 +88,10 @@ import DashboardContainer from "../components/Dashboard/Dashboard.astro";
               </div>
 
               <div class="col-span-full">
-                <label for="photo" class="label">
+                <label
+                  for="photo"
+                  class="block mb-2 text-sm sm:text-base font-medium"
+                >
                   Cover Photo
                 </label>
                 <div class="mt-2 flex items-center gap-x-3">
@@ -107,11 +110,11 @@ import DashboardContainer from "../components/Dashboard/Dashboard.astro";
 
                   <div class="flex items-center">
                     <label
-                      class="block mb-2 text-sm font-medium text-gray-900"
+                      class="block mb-2 text-sm sm:text-base font-medium"
                       for="image__upload">Upload file</label
                     >
                     <input
-                      class="block w-full text-sm input cursor-pointer"
+                      class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-2 pl-2 placeholder:text-gray-400 text-sm sm:text-base"
                       aria-describedby="image__upload"
                       id="user_avatar"
                       type="file"
@@ -124,8 +127,15 @@ import DashboardContainer from "../components/Dashboard/Dashboard.astro";
         </div>
 
         <div class="mt-6 flex items-center justify-end gap-x-6">
-          <button type="button" class="text-sm font-semibold">Cancel</button>
-          <button type="submit" class="text-sm btn btn-accent">Save</button>
+          <button
+            type="button"
+            class="rounded-lg px-4 py-2 font-semibold shadow-sm">Cancel</button
+          >
+          <button
+            type="submit"
+            class="rounded-lg px-4 py-2 font-semibold shadow-sm bg-sky-500 text-white hover:border hover:border-sky-500 hover:text-sky-500 hover:bg-transparent"
+            >Save</button
+          >
         </div>
       </form>
     </DashboardContainer>

@@ -1,6 +1,6 @@
-
 ---
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 
 import { Icon } from "astro-icon/components";
 ---
@@ -14,74 +14,106 @@ import { Icon } from "astro-icon/components";
     <title>Astro</title>
   </head>
   <body class="">
+    <Navbar />
 
-        <Navbar />
+    <div class="mt-32 h-screen p-8 w-full max-w-3xl mx-auto">
+      <div class="grid sm:grid-cols-2 space-y-3 sm:space-y-0 sm:space-x-3">
+        <form action="" class="">
+          <div class="mb-2">
+            <label for="name" class="block mb-2 text-sm md:text-lg font-medium">
+              Your Name
+            </label>
+            <input
+              type="text"
+              class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-2 pl-2 placeholder:text-gray-400 sm:text-sm w-full"
+              placeholder="Enter your name"
+            />
+          </div>
 
-        <div class="mt-32 h-screen p-8 w-full max-w-3xl mx-auto">
-            <div class="grid sm:grid-cols-2 space-y-3 sm:space-y-0 sm:space-x-3">
-                <form action="" class="">
-                    <div class="">
-                        <label for="name" class="label"> Your Name </label>
-                        <input type="text" class="input w-full" placeholder="Enter your name" >
-                    </div>
+          <div class="mb-2">
+            <label
+              for="email"
+              class="block mb-2 text-sm md:text-lg font-medium"
+            >
+              Your Name
+            </label>
+            <input
+              type="email"
+              class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-2 pl-2 placeholder:text-gray-400 sm:text-sm w-full"
+              placeholder="Enter your email"
+            />
+          </div>
 
-                    <div class="">
-                        <label for="email" class="label"> Your Name </label>
-                        <input type="email" class="input w-full" placeholder="Enter your email" >
-                    </div>
+          <div class="mb-2">
+            <label
+              for="subject"
+              class="block mb-2 text-sm md:text-lg font-medium"
+            >
+              Subject
+            </label>
+            <input
+              type="text"
+              class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-2 pl-2 placeholder:text-gray-400 sm:text-sm w-full"
+              placeholder="Enter your email"
+            />
+          </div>
 
-                    <div class="">
-                        <label for="subject" class="label"> Subject </label>
-                        <input type="text" class="input w-full" placeholder="Enter your email" >
-                    </div>
+          <div class="mb-2">
+            <label
+              for="message"
+              class="block mb-2 text-sm md:text-lg font-medium"
+            >
+              Message
+            </label>
+            <textarea
+              rows="10"
+              class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-2 pl-2 placeholder:text-gray-400 sm:text-sm w-full"
+              placeholder="Enter your message"></textarea>
+          </div>
 
-                    <div class="">
-                        <label for="message" class="label"> Message </label>
-                        <textarea rows="10" class="input w-full" placeholder="Enter your message" ></textarea>
-                    </div>
+          <button
+            class="rounded-lg px-4 py-2 font-semibold shadow-sm bg-gray-800 text-white hover:bg-transparent hover:border hover:border-gray-900 hover:text-black mt-4"
+          >
+            Send
+          </button>
+        </form>
 
-                    <button class="btn btn-primary hover:btn-primary-accent mt-4"> Send </button>
-                </form>
+        <!-- additional info  -->
+        <section class="grid items-center p-8 rounded-lg">
+          <div class="">
+            <h2 class="text-2xl font-semibold leading-5 tracking-wider">
+              Contact Information
+            </h2>
+          </div>
 
+          <div class="text-sm my-8">
+            <p>
+              fconfi fj a jlksjdf; irm az ,sdkfj j;lkaovmasfd l;sd igr fa;as.
+              jasik jfa jfksir a irs kaj;sdir
+            </p>
+            <p>fconfi fj a jlksjdf; irm az ,sdkfj j;lkaovmasfd l;sd igr</p>
+          </div>
 
-
-
-                <!-- additional info  -->
-                <section class="grid items-center p-8 rounded-lg">
-                    <div class="">
-                        <h2 class="text-2xl font-semibold leading-5 tracking-wider"> Contact Information </h2>
-                    </div>
-
-                    <div class="text-sm my-8">
-                        <p> fconfi fj a jlksjdf; irm az ,sdkfj  j;lkaovmasfd l;sd igr fa;as. jasik jfa jfksir a irs kaj;sdir  </p>
-                        <p> fconfi fj a jlksjdf; irm az ,sdkfj  j;lkaovmasfd l;sd igr </p>
-                    </div>
-
-                    <div class="space-y-7 text-sky-500">
-                        <div class="flex items-center space-x-3 font-semibold text-xl"> 
-                            <Icon name="ic:baseline-phone" />
-                            <span class="italic">
-                                501 636 0841
-                            </span> 
-                        </div>
-
-                        <div class="flex items-center space-x-3 font-semibold text-xl"> 
-                            <Icon name="ic:baseline-email" />
-                            <span class="italic">
-                                ezlosswm@gmail.com
-                            </span> 
-                        </div>
-
-                        <div class="flex items-center space-x-3 font-semibold text-xl"> 
-                            <Icon name="mdi:location" />
-                            <span class="italic">
-                                Corozal Town, Corozal
-                            </span> 
-                        </div>
-                    </div>
-                </section>
+          <div class="space-y-7 text-sky-500">
+            <div class="flex items-center space-x-3 font-semibold text-xl">
+              <Icon name="ic:baseline-phone" />
+              <span class="italic"> 501 636 0841 </span>
             </div>
-        </div>
 
+            <div class="flex items-center space-x-3 font-semibold text-xl">
+              <Icon name="ic:baseline-email" />
+              <span class="italic"> ezlosswm@gmail.com </span>
+            </div>
+
+            <div class="flex items-center space-x-3 font-semibold text-xl">
+              <Icon name="mdi:location" />
+              <span class="italic"> Corozal Town, Corozal </span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <Footer />
   </body>
 </html>

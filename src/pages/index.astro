@@ -1,63 +1,46 @@
 ---
-import Navbar from "../components/Navbar.astro"
+import Navbar from "../components/Navbar.astro";
 
 import Banner from "../components/Banner.astro";
 import OrganizationList from "../components/Dashboard/Organizer/OrganizationList.astro";
 import GridArea from "../components/GridArea.astro";
+
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body class="">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class="">
+    <Navbar />
 
-        <Navbar />
+    <!-- organization list -->
+    <OrganizationList />
 
-        <!-- organization list -->
-        <OrganizationList />
-        
+    <!-- container holding the main content and the ad space -->
+    <main class="relative isolate flex flex-col sm:flex-row-reverse w-full">
+      <!-- ad space -->
+      <section class="hidden lg:absolute md:h-screen bg-red-500 z-10">
+        <div class="p-1 max-h-20 h-36 sm:h-full sm:w-24 md:mr-5">ad sense</div>
+      </section>
 
+      <!-- main content -->
+      <section class="sm:max-w-5xl sm:mx-auto sm:flex-1">
+        <div class="px-4">
+          <div class="w-full">
+            <Banner />
 
-        <!-- container holding the main content and the ad space -->
-        <main class="relative isolate flex flex-col sm:flex-row-reverse w-full">
+            <GridArea />
+          </div>
+        </div>
+      </section>
+    </main>
 
-
-
-            <!-- ad space -->
-            <section class="hidden md:h-screen bg-red-500 z-10 max-h-20 h-16 sm:h-full sm:w-24 md:mr-5">
-                <div class="p-1">
-                    ad sense
-                </div>
-            </section>
-
-
-            <!-- main content -->
-            <section class="sm:max-w-5xl sm:mx-auto sm:flex-1">
-                <div class="px-4">
-                    <div class="w-full">
-
-                        <Banner />
-
-                        <GridArea />
-
-                    </div>
-                </div>
-            </section>
-
-
-
-        </main>
-
-
-        <footer class="mt-36">
-            footer sectmion
-        </footer>
-
-
-	</body>
+    <Footer />
+  </body>
 </html>

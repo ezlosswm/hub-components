@@ -1,6 +1,8 @@
 ---
 import DashboardHeader from "../components/Dashboard/DashboardHeader.astro";
 import DashboardContainer from "../components/Dashboard/Dashboard.astro";
+
+import OrganizerTable from "../components/Dashboard/Organizer/OrganizerTable.astro";
 ---
 
 <html lang="en">
@@ -25,7 +27,7 @@ import DashboardContainer from "../components/Dashboard/Dashboard.astro";
               <div class="sm:col-span-4">
                 <label
                   for="organizer__name"
-                  class="label"
+                  class="block mb-2 text-sm sm:text-base font-medium"
                 >
                   Organizer Name
                 </label>
@@ -36,7 +38,7 @@ import DashboardContainer from "../components/Dashboard/Dashboard.astro";
                       name="organizer__name"
                       id="organizerName"
                       autocomplete="organizer__name"
-                      class="block flex-1 input"
+                      class="w-full rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-2 pl-2 placeholder:text-gray-400 sm:text-sm"
                       placeholder="Pancho's Drink House AA"
                     />
                   </div>
@@ -44,7 +46,10 @@ import DashboardContainer from "../components/Dashboard/Dashboard.astro";
               </div>
 
               <div class="col-span-full">
-                <label for="photo" class="label">
+                <label
+                  for="photo"
+                  class="block mb-2 text-sm sm:text-base font-medium"
+                >
                   Organizer's Logo
                 </label>
                 <div class="mt-2 flex items-center gap-x-3">
@@ -63,11 +68,11 @@ import DashboardContainer from "../components/Dashboard/Dashboard.astro";
 
                   <div class="flex items-center">
                     <label
-                      class="label"
+                      class="block mb-2 text-sm md:text-base font-medium flex-1"
                       for="image__upload">Upload file</label
                     >
                     <input
-                      class="block w-full input text-sm"
+                      class="w-full rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-2 pl-2 placeholder:text-gray-400 text-sm md:text-base"
                       aria-describedby="image__upload"
                       id="org__img"
                       type="file"
@@ -80,10 +85,15 @@ import DashboardContainer from "../components/Dashboard/Dashboard.astro";
         </div>
 
         <div class="mt-6 flex items-center justify-end gap-x-6">
-          <button type="button" class="text-sm font-semibold">Cancel</button>
-          <button type="submit" class="rounded-lg text-sm btn btn-accent"
-            >Save</button
+          <button
+            type="button"
+            class="rounded-lg px-4 py-2 font-semibold shadow-sm">Cancel</button
           >
+          <button
+            class="rounded-lg px-4 py-2 font-semibold shadow-sm bg-sky-500 text-white hover:border hover:border-sky-500 hover:text-sky-500 hover:bg-transparent"
+          >
+            Save
+          </button>
         </div>
       </form>
 
@@ -93,70 +103,7 @@ import DashboardContainer from "../components/Dashboard/Dashboard.astro";
       <!-- space -->
       <!-- space -->
 
-      <table class="text-center w-full max-w-2xl mx-auto table-auto">
-        <thead>
-          <tr>
-            <th> Image </th>
-            <th> Organization Name </th>
-            <th> Created </th>
-            <th> </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <div class="size-5 md:size-10 rounded-full bg-red-500"></div>
-            </td>
-            <td> Pancho's Drink House </td>
-            <td> 01/01/24 </td>
-            <td>
-              <span
-                class="inline-flex overflow-hidden rounded-md border bg-white shadow-sm"
-              >
-                <button
-                  class="inline-block border-e p-3 text-gray-700 hover:bg-gray-50 focus:relative"
-                  title="Edit Product"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-4"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
-                    ></path>
-                  </svg>
-                </button>
-
-                <button
-                  class="inline-block p-3 text-gray-700 hover:bg-gray-50 focus:relative"
-                  title="Delete Product"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-4"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
-                    ></path>
-                  </svg>
-                </button>
-              </span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <OrganizerTable />
     </DashboardContainer>
   </body>
 </html>
