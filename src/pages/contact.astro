@@ -16,7 +16,7 @@ import { Icon } from "astro-icon/components";
   <body class="">
     <Navbar />
 
-    <div class="mt-32 h-screen p-8 w-full max-w-3xl mx-auto">
+    <div class="p-8 w-full max-w-3xl mx-auto">
       <div class="grid sm:grid-cols-2 space-y-3 sm:space-y-0 sm:space-x-3">
         <form action="" class="">
           <div class="mb-2">
@@ -24,6 +24,7 @@ import { Icon } from "astro-icon/components";
               Your Name
             </label>
             <input
+              name="name"
               type="text"
               class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-2 pl-2 placeholder:text-gray-400 sm:text-sm w-full"
               placeholder="Enter your name"
@@ -35,9 +36,10 @@ import { Icon } from "astro-icon/components";
               for="email"
               class="block mb-2 text-sm md:text-lg font-medium"
             >
-              Your Name
+              Your Email
             </label>
             <input
+              name="email"
               type="email"
               class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-2 pl-2 placeholder:text-gray-400 sm:text-sm w-full"
               placeholder="Enter your email"
@@ -52,9 +54,10 @@ import { Icon } from "astro-icon/components";
               Subject
             </label>
             <input
+              name="subject"
               type="text"
               class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-2 pl-2 placeholder:text-gray-400 sm:text-sm w-full"
-              placeholder="Enter your email"
+              placeholder="Enter the subject"
             />
           </div>
 
@@ -94,7 +97,7 @@ import { Icon } from "astro-icon/components";
             <p>fconfi fj a jlksjdf; irm az ,sdkfj j;lkaovmasfd l;sd igr</p>
           </div>
 
-          <div class="space-y-7 text-sky-500">
+          <div class="space-y-7 text-sky-600">
             <div class="flex items-center space-x-3 font-semibold text-xl">
               <Icon name="ic:baseline-phone" />
               <span class="italic"> 501 636 0841 </span>

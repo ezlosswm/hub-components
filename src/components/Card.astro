@@ -8,17 +8,21 @@ import card from "../assets/hero.jpg";
   <div
     class="px-4 py-2 text-gray-500 border-2 border-white rounded-lg bg-neutral-100/60 w-full flex justify-between items-center"
   >
-    <h4 id="date" class="font-light text-sm sm:text-base tracking-wide">
+    <h3 id="date" class="font-light text-sm sm:text-base tracking-wide">
       01/01/24
-    </h4>
+    </h3>
 
     <h3 id="gonna-be-custom-title" class="tracking-tight">
-      <a href="#" class="hover:underline hover:text-sky-600"> Pancho's Drink House </a>
+      <!-- a tag needs to be disabled until a page for each organizer is made -->
+      <a href="/" class="hover:underline hover:text-sky-600">
+        Pancho's Drink House
+      </a>
     </h3>
   </div>
 
   <Image
     class="object-cover h-72 rounded-lg w-full"
+    quality="low"
     src={card}
     alt="Custom card"
   />
@@ -28,7 +32,7 @@ import card from "../assets/hero.jpg";
     <h2
       class="hover:text-sky-500 text-3xl font-extrabold leading-7 tracking-wide"
     >
-      <a class="hover:underline" href=""> Two For One Drinks </a>
+      <a class="hover:underline" href="/"> Two For One Drinks </a>
     </h2>
 
     <!-- 200 char limit -->
@@ -38,10 +42,8 @@ import card from "../assets/hero.jpg";
       development. sdklfja fjf lkfkl jfklj jlkasd lksd jf
     </p>
 
-    <!-- Here goes the filter -->
-    <button
-      class="rounded-lg px-4 py-2 font-semibold shadow-sm bg-sky-500 text-white hover:border hover:border-sky-500 hover:text-sky-500 hover:bg-transparent"
-    >
+    <!-- filters -->
+    <button class="p-2 text-sm font-semibold text-sky-600 hover:underline">
       Food & Drink
     </button>
   </div>
