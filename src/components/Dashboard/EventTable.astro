@@ -25,7 +25,7 @@ import pic from "../../assets/hero.jpg";
     <!-- space -->
     <!-- this is gonna be the form when clicking the edit button
      htmx -->
-    <tr class="text-xs md:text-sm hover:text-gray-600">
+     <tr class="text-sm hover:text-black/65">
       <td class="p-1">
         <Image class="mx-auto size-12 rounded-full" src={pic} alt="Bubble" />
       </td>
@@ -35,36 +35,33 @@ import pic from "../../assets/hero.jpg";
           type="text"
           name="event__title"
           value="Two for One Drinks"
-          class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-1 pl-2 placeholder:text-gray-400 sm:text-sm"
+          class="rounded-lg text-black/65 focus:text-black block cursor-pointer border border-gray-300 bg-transparent py-1 pl-2 placeholder:text-gray-400 sm:text-sm"
         />
 
         <!-- event description: limit 200 char -->
         <input
           type="text"
-          maxlength="200"
           name="event__description"
           value="The same description"
-          class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-1 pl-2 placeholder:text-gray-400 sm:text-sm w-full"
+          class="rounded-lg text-black/65 md:w-full focus:text-black block cursor-pointer border border-gray-300 bg-transparent py-1 pl-2 placeholder:text-gray-400 sm:text-sm"
         />
       </td>
 
       <td class="p-1">
         <input
           type="text"
-          maxlength="200"
           name="event__organizer"
           value="Organizer"
-          class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-1 pl-2 placeholder:text-gray-400 sm:text-sm w-full"
+          class="rounded-lg text-black/65 focus:text-black block cursor-pointer border border-gray-300 bg-transparent py-1 pl-2 placeholder:text-gray-400 sm:text-sm"
         />
       </td>
 
       <td class="p-1">
         <input
           type="text"
-          maxlength="200"
           name="event__date"
           value="01/01/24"
-          class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-1 pl-2 placeholder:text-gray-400 sm:text-sm w-full"
+          class="rounded-lg text-black/65 focus:text-black block cursor-pointer border border-gray-300 bg-transparent py-1 pl-2 placeholder:text-gray-400 sm:text-sm"
         />
       </td>
 

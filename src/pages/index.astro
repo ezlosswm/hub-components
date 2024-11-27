@@ -1,10 +1,8 @@
 ---
 import Navbar from "../components/Navbar.astro";
-
 import Banner from "../components/Banner.astro";
 import OrganizationList from "../components/Dashboard/Organizer/OrganizationList.astro";
 import GridArea from "../components/GridArea.astro";
-
 import Footer from "../components/Footer.astro";
 ---
 
@@ -14,31 +12,55 @@ import Footer from "../components/Footer.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Hub Components - Home</title>
   </head>
-  <body class="">
+  <body class="min-h-screen bg-gray-50">
     <Navbar />
 
-    <!-- organization list -->
-    <OrganizationList />
-
-    <!-- container holding the main content and the ad space -->
-    <main class="relative isolate flex flex-col sm:flex-row-reverse w-full">
-      <!-- ad space -->
-      <section class="hidden lg:absolute md:h-screen bg-red-500 z-10">
-        <div class="p-1 max-h-20 h-36 sm:h-full sm:w-24 md:mr-5">ad sense</div>
-      </section>
-
-      <!-- main content -->
-      <section class="sm:max-w-5xl sm:mx-auto sm:flex-1">
-        <div class="px-4">
-          <div class="w-full">
-            <Banner />
-
-            <GridArea />
+    <!-- Hero Section -->
+    <div class="relative isolate px-6 pt-14 lg:px-8">
+      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            Welcome to Hub Components
+          </h1>
+          <p class="mt-6 text-lg leading-8 text-gray-600">
+            Your one-stop solution for managing organizations and events
+          </p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="/register" class="rounded-md bg-gray-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
+              Get started
+            </a>
+            <a href="/contact" class="text-sm font-semibold leading-6 text-gray-900">
+              Contact us <span aria-hidden="true">→</span>
+            </a>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid lg:grid-cols-3 gap-8">
+        <!-- Organizations Section -->
+        <div class="lg:col-span-2">
+          <h2 class="text-2xl font-bold mb-6">Your Organizations</h2>
+          <OrganizationList />
+          <GridArea />
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="space-y-8">
+          <Banner />
+          <!-- Ad Space -->
+          <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+            <h3 class="text-lg font-semibold mb-4">Sponsored</h3>
+            <div class="h-48 bg-gray-100 rounded flex items-center justify-center text-gray-500">
+              Ad Space
+            </div>
+          </div>
+        </aside>
+      </div>
     </main>
 
     <Footer />

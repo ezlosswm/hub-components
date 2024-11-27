@@ -1,7 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
-
 import { Icon } from "astro-icon/components";
 ---
 
@@ -11,109 +10,127 @@ import { Icon } from "astro-icon/components";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Hub Components - Contact Us</title>
   </head>
-  <body class="">
+  <body class="min-h-screen bg-gray-50">
     <Navbar />
 
-    <div class="mt-24 p-8 w-full max-w-5xl mx-auto">
-      <div class="grid sm:grid-cols-2 space-y-3 sm:space-y-0 sm:space-x-3">
-        <form action="" class="">
-          <div class="mb-2">
-            <label for="name" class="block mb-2 text-sm md:text-lg font-medium">
-              Your Name
-            </label>
-            <input
-              name="name"
-              type="text"
-              class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-2 pl-2 placeholder:text-gray-400 sm:text-sm w-full"
-              placeholder="Enter your name"
-            />
-          </div>
-
-          <div class="mb-2">
-            <label
-              for="email"
-              class="block mb-2 text-sm md:text-lg font-medium"
-            >
-              Your Email
-            </label>
-            <input
-              name="email"
-              type="email"
-              class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-2 pl-2 placeholder:text-gray-400 sm:text-sm w-full"
-              placeholder="Enter your email"
-            />
-          </div>
-
-          <div class="mb-2">
-            <label
-              for="subject"
-              class="block mb-2 text-sm md:text-lg font-medium"
-            >
-              Subject
-            </label>
-            <input
-              name="subject"
-              type="text"
-              class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-2 pl-2 placeholder:text-gray-400 sm:text-sm w-full"
-              placeholder="Enter the subject"
-            />
-          </div>
-
-          <div class="mb-2">
-            <label
-              for="message"
-              class="block mb-2 text-sm md:text-lg font-medium"
-            >
-              Message
-            </label>
-            <textarea
-              rows="10"
-              class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-2 pl-2 placeholder:text-gray-400 sm:text-sm w-full"
-              placeholder="Enter your message"></textarea>
-          </div>
-
-          <button
-            class="rounded-lg px-4 py-2 font-semibold shadow-sm bg-gray-800 text-white hover:bg-transparent hover:border hover:border-gray-900 hover:text-black mt-4"
-          >
-            Send
-          </button>
-        </form>
-
-        <!-- additional info  -->
-        <section class="grid items-center p-8 rounded-lg">
-          <div class="">
-            <h2 class="text-2xl font-semibold leading-5 tracking-wider">
-              Contact Information
-            </h2>
-          </div>
-
-          <div class="text-sm my-8">
-            <p>
-              fconfi fj a jlksjdf; irm az ,sdkfj j;lkaovmasfd l;sd igr fa;as.
-              jasik jfa jfksir a irs kaj;sdir
+    <div class="relative isolate bg-white">
+      <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+        <!-- Contact Information -->
+        <div class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
+          <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+            <h1 class="text-3xl font-bold tracking-tight text-gray-900">Get in touch</h1>
+            <p class="mt-6 text-lg leading-8 text-gray-600">
+              Have questions or need assistance? We're here to help! Reach out to us using any of the methods below.
             </p>
-            <p>fconfi fj a jlksjdf; irm az ,sdkfj j;lkaovmasfd l;sd igr</p>
+            <dl class="mt-10 space-y-4 text-base leading-7 text-gray-600">
+              <div class="flex gap-x-4">
+                <dt class="flex-none">
+                  <span class="sr-only">Address</span>
+                  <Icon name="mdi:location" class="h-7 w-6 text-gray-600" />
+                </dt>
+                <dd>Corozal Town, Corozal</dd>
+              </div>
+              <div class="flex gap-x-4">
+                <dt class="flex-none">
+                  <span class="sr-only">Telephone</span>
+                  <Icon name="ic:baseline-phone" class="h-7 w-6 text-gray-600" />
+                </dt>
+                <dd>
+                  <a class="hover:text-gray-900" href="tel:+501 636 0841">
+                    501 636 0841
+                  </a>
+                </dd>
+              </div>
+              <div class="flex gap-x-4">
+                <dt class="flex-none">
+                  <span class="sr-only">Email</span>
+                  <Icon name="ic:baseline-email" class="h-7 w-6 text-gray-600" />
+                </dt>
+                <dd>
+                  <a class="hover:text-gray-900" href="mailto:ezlosswm@gmail.com">
+                    ezlosswm@gmail.com
+                  </a>
+                </dd>
+              </div>
+            </dl>
           </div>
+        </div>
 
-          <div class="space-y-7 text-sky-600">
-            <div class="flex items-center space-x-3 font-semibold text-xl">
-              <Icon name="ic:baseline-phone" />
-              <span class="italic"> 501 636 0841 </span>
+        <!-- Contact Form -->
+        <form class="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
+          <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
+            <div class="grid grid-cols-1 gap-y-6">
+              <div>
+                <label for="name" class="block text-sm font-semibold leading-6 text-gray-900">
+                  Name
+                </label>
+                <div class="mt-2.5">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    autocomplete="given-name"
+                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+                    placeholder="Enter your name"
+                  />
+                </div>
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">
+                  Email
+                </label>
+                <div class="mt-2.5">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    autocomplete="email"
+                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+                    placeholder="Enter your email"
+                  />
+                </div>
+              </div>
+              <div>
+                <label for="subject" class="block text-sm font-semibold leading-6 text-gray-900">
+                  Subject
+                </label>
+                <div class="mt-2.5">
+                  <input
+                    type="text"
+                    name="subject"
+                    id="subject"
+                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+                    placeholder="Enter the subject"
+                  />
+                </div>
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-semibold leading-6 text-gray-900">
+                  Message
+                </label>
+                <div class="mt-2.5">
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows="8"
+                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+                    placeholder="Enter your message"
+                  ></textarea>
+                </div>
+              </div>
             </div>
-
-            <div class="flex items-center space-x-3 font-semibold text-xl">
-              <Icon name="ic:baseline-email" />
-              <span class="italic"> ezlosswm@gmail.com </span>
-            </div>
-
-            <div class="flex items-center space-x-3 font-semibold text-xl">
-              <Icon name="mdi:location" />
-              <span class="italic"> Corozal Town, Corozal </span>
+            <div class="mt-8 flex justify-end">
+              <button
+                type="submit"
+                class="rounded-md bg-gray-900 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
+              >
+                Send message
+              </button>
             </div>
           </div>
-        </section>
+        </form>
       </div>
     </div>
 

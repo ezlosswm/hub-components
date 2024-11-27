@@ -1,6 +1,9 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+
+import { Image } from "astro:assets";
+import logo from "../assets/bayside-logo.svg";
 ---
 
 <html lang="en">
@@ -9,169 +12,107 @@ import Footer from "../components/Footer.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Register - Hub Components</title>
   </head>
-  <body class="">
+  <body class="bg-gray-50">
     <Navbar />
 
-    <div
-      class="mt-8 h-dvh max-w-3xl w-full mx-auto px-8 grid place-items-center"
-    >
-      <div class="w-full space-y-12">
-        <a href="/" class="w-full grid place-items-center">
-          .
-          <svg
-            class="size-32"
-            viewBox="0 0 641 539"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            xml:space="preserve"
-            style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.5;"
-          >
-            <g transform="matrix(1,0,0,1,-1820.78,-1332.68)">
-              <g transform="matrix(1,0,0,1,1588.41,321.013)">
-                <g transform="matrix(1,0,0,1,-212.819,635.747)">
-                  <g transform="matrix(1,0,0,1,578.784,38.9024)">
-                    <g transform="matrix(1.16,0,0,0.946667,-120.097,198.477)">
-                      <path
-                        d="M464.061,454.077C446.156,444.262 425.608,438.679 403.765,438.679C385.274,438.679 367.71,442.68 351.893,449.863L351.893,609.774C348.645,610.026 345.364,610.154 342.052,610.154C323.561,610.154 305.997,606.153 290.179,598.97L290.179,369.921C305.997,362.738 323.561,358.737 342.052,358.737C345.364,358.737 348.645,358.866 351.893,359.118L351.893,432.675C371.74,441.386 385.587,437.048 406.786,437.048C422.959,437.048 438.027,431.199 450.655,421.135"
-                        style="fill:none;stroke:black;stroke-width:23.61px;"
-                      ></path>
-                    </g>
-                    <g
-                      transform="matrix(0.885556,0,0,0.885556,24.7785,61.5207)"
-                    >
-                      <path
-                        d="M297.351,536.032C294.405,536.279 291.425,536.405 288.416,536.405C260.648,536.405 242.51,541.042 216.512,531.73L216.512,353.507C235.37,335.957 260.648,325.215 288.416,325.215C319.136,325.215 346.809,338.361 366.112,359.33C379.673,374.06 389.103,392.652 392.557,413.258C385.059,411.566 377.261,410.674 369.256,410.674C341.488,410.674 316.209,421.415 297.351,438.966L297.351,536.032Z"
-                        style="fill:none;stroke:black;stroke-width:28.23px;"
-                      ></path>
-                    </g>
-                  </g>
-                  <g transform="matrix(1,0,0,1,650.372,114.581)">
-                    <g transform="matrix(1.16,0,0,0.946667,-120.097,198.477)">
-                      <path
-                        d="M402.348,374.135C441.316,395.497 467.76,436.908 467.76,484.446C467.76,553.826 411.432,610.154 342.052,610.154C323.561,610.154 305.997,606.153 290.179,598.97L290.179,529.832"
-                        style="fill:none;stroke:black;stroke-width:23.61px;"
-                      ></path>
-                    </g>
-                    <g
-                      transform="matrix(0.885556,0,0,0.885556,24.7785,61.5207)"
-                    >
-                      <path
-                        d="M311.717,327.799C332.99,332.598 351.839,343.826 366.112,359.33C383.43,378.142 394.012,403.25 394.012,430.81C394.012,467.904 374.844,500.556 345.881,519.394M216.512,453.097L216.512,450.573"
-                        style="fill:none;stroke:black;stroke-width:28.23px;"
-                      ></path>
-                    </g>
-                  </g>
-                </g>
-                <g transform="matrix(-1,0,0,1,1317.74,636.112)">
-                  <g transform="matrix(1,0,0,1,578.784,38.9024)">
-                    <g transform="matrix(1.16,0,0,0.946667,-120.097,198.477)">
-                      <path
-                        d="M464.061,454.077C446.156,444.262 425.608,438.679 403.765,438.679C385.274,438.679 367.71,442.68 351.893,449.863L351.893,609.774C348.645,610.026 345.364,610.154 342.052,610.154C323.561,610.154 305.997,606.153 290.179,598.97L290.179,369.921C305.997,362.738 323.561,358.737 342.052,358.737C345.364,358.737 348.645,358.866 351.893,359.118L351.893,432.675C371.74,441.386 385.587,437.048 406.786,437.048C422.959,437.048 438.027,431.199 450.655,421.135"
-                        style="fill:none;stroke:black;stroke-width:23.61px;"
-                      ></path>
-                    </g>
-                    <g
-                      transform="matrix(0.885556,0,0,0.885556,24.7785,61.5207)"
-                    >
-                      <path
-                        d="M297.351,536.032C294.405,536.279 291.425,536.405 288.416,536.405C260.648,536.405 242.51,541.042 216.512,531.73L216.512,353.507C235.37,335.957 260.648,325.215 288.416,325.215C319.136,325.215 346.809,338.361 366.112,359.33C379.673,374.06 389.103,392.652 392.557,413.258C385.059,411.566 377.261,410.674 369.256,410.674C341.488,410.674 316.209,421.415 297.351,438.966L297.351,536.032Z"
-                        style="fill:none;stroke:black;stroke-width:28.23px;"
-                      ></path>
-                    </g>
-                  </g>
-                  <g transform="matrix(1,0,0,1,650.372,114.581)">
-                    <g transform="matrix(1.16,0,0,0.946667,-120.097,198.477)">
-                      <path
-                        d="M402.348,374.135C441.316,395.497 467.76,436.908 467.76,484.446C467.76,553.826 411.432,610.154 342.052,610.154C323.561,610.154 305.997,606.153 290.179,598.97L290.179,529.832"
-                        style="fill:none;stroke:black;stroke-width:23.61px;"
-                      ></path>
-                    </g>
-                    <g
-                      transform="matrix(0.885556,0,0,0.885556,24.7785,61.5207)"
-                    >
-                      <path
-                        d="M311.717,327.799C332.99,332.598 351.839,343.826 366.112,359.33C383.43,378.142 394.012,403.25 394.012,430.81C394.012,467.904 374.844,500.556 345.881,519.394M216.512,453.097L216.512,450.573"
-                        style="fill:none;stroke:black;stroke-width:28.23px;"
-                      ></path>
-                    </g>
-                  </g>
-                </g>
-                <g transform="matrix(1,0,0,1,53.4204,7.04889)">
-                  <path
-                    d="M499.049,1530.39L499.049,1022.84"
-                    style="fill:none;stroke:black;stroke-width:25px;"></path>
-                </g>
-              </g>
-            </g>
-          </svg>
+    <div class="flex min-h-[85vh] flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+      <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+        <a href="/" class="flex justify-center">
+            <Image class="h-20 w-auto" src={logo} alt="Hub Components Logo" />
         </a>
+        <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+          Create your account
+        </h2>
+      </div>
 
-        <form action="" class="w-full space-y-5">
-          <div class="text-center text-lg md:text-2xl font-semibold">
-            Register
-          </div>
-          <div class="grid">
-            <label
-              class="block mb-2 text-sm md:text-lg font-medium"
-              for="email"
-            >
-              Email
+      <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+        <form class="space-y-6" action="#" method="POST">
+          <div>
+            <label for="name" class="block text-sm font-medium leading-6 text-gray-900">
+              Full name
             </label>
-            <input
-              class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-2 pl-2 placeholder:text-gray-400 sm:text-sm w-full"
-              id="email"
-              type="email"
-              placeholder="Enter your email"
-            />
+            <div class="mt-2">
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+                placeholder="John Doe"
+              />
+            </div>
           </div>
 
-          <div class="grid">
-            <label
-              class="block mb-2 text-sm md:text-lg font-medium"
-              for="username"
-            >
-              Username
+          <div>
+            <label for="email" class="block text-sm font-medium leading-6 text-gray-900">
+              Email address
             </label>
-            <input
-              class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-2 pl-2 placeholder:text-gray-400 sm:text-sm w-full"
-              id="username"
-              type="text"
-              placeholder="Enter your username"
-            />
+            <div class="mt-2">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+                placeholder="you@example.com"
+              />
+            </div>
           </div>
 
-          <div class="grid">
-            <label
-              class="block mb-2 text-sm font-medium md:text-lg"
-              for="password">Password</label
-            >
-            <input
-              class="rounded-lg block cursor-pointer border border-gray-300 bg-transparent py-2 pl-2 placeholder:text-gray-400 sm:text-sm w-full"
-              id="password"
-              type="password"
-              placeholder="Enter your password"
-            />
+          <div>
+            <label for="password" class="block text-sm font-medium leading-6 text-gray-900">
+              Password
+            </label>
+            <div class="mt-2">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="new-password"
+                required
+                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+                placeholder="••••••••"
+              />
+            </div>
           </div>
 
-          <p class="text-sm">
-            Already have an account? <span
-              class="text-sky-500 hover:text-sky-600 underline"
-            >
-              <a href="/register"> Log into your account </a>
-            </span>
-          </p>
+          <div>
+            <label for="confirm-password" class="block text-sm font-medium leading-6 text-gray-900">
+              Confirm password
+            </label>
+            <div class="mt-2">
+              <input
+                id="confirm-password"
+                name="confirm-password"
+                type="password"
+                autocomplete="new-password"
+                required
+                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+                placeholder="••••••••"
+              />
+            </div>
+          </div>
 
-          <div class="text-center">
+          <div>
             <button
-              class="rounded-lg px-4 py-2 font-semibold shadow-sm bg-sky-500 text-white mb-8 mx-auto w-1/2 hover:border hover:border-sky-500 hover:text-sky-500 hover:bg-transparent"
+              type="submit"
+              class="flex w-full justify-center rounded-md bg-gray-900 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
             >
-              Sign Up
+              Create account
             </button>
           </div>
         </form>
+
+        <p class="mt-10 text-center text-sm text-gray-500">
+          Already have an account?
+          <a href="/login" class="font-semibold leading-6 text-gray-600 hover:text-gray-500">
+            Sign in
+          </a>
+        </p>
       </div>
     </div>
 
