@@ -14,11 +14,11 @@ import Footer from "../components/Footer.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Hub Components - Home</title>
   </head>
-  <body class="min-h-screen bg-gray-50">
+  <body class="min-h-screen w-screen bg-gray-50">
     <Navbar />
 
     <!-- Hero Section -->
-    <div class="relative isolate px-6 pt-14 lg:px-8">
+    <div class="relative isolate w-full px-4 pt-14 lg:px-8">
       <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div class="text-center">
           <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -40,11 +40,11 @@ import Footer from "../components/Footer.astro";
     </div>
 
     <!-- Main Content -->
-    <main class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <main class="relative w-full max-w-7xl mx-auto sm:px-6 lg:px-8 py-12">
       <div class="grid lg:grid-cols-3 gap-8">
         <!-- Organizations Section -->
         <div class="lg:col-span-2">
-          <h2 class="text-2xl font-bold mb-6">Your Organizations</h2>
+          <h2 class="text-2xl font-bold mb-2 pl-4">All Organizers</h2>
           <OrganizationList />
           <GridArea />
         </div>
