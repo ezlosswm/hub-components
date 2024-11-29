@@ -3,22 +3,21 @@ import { Image } from "astro:assets";
 import card from "../assets/hero.jpg";
 ---
 
-<div class="text-black text base rounded-lg border border-gray-200 grid h-[40rem]">
+<div
+  class="text-black text base rounded-lg border border-gray-200 grid h-[40rem]"
+>
   <!-- header -->
   <div
     class="text-sm px-4 py-2 border-2 border-white rounded-lg bg-neutral-100/60 w-full flex justify-between items-center"
   >
-  <h3 id="gonna-be-custom-title" class="font-bold text-black/60">
+    <h3 id="gonna-be-custom-title" class="font-bold text-black/60">
       <!-- a tag needs to be disabled until a page for each organizer is made -->
       <a href="/" class="hover:underline hover:text-sky-600">
         Pancho's Drink House
       </a>
     </h3>
 
-    <h3 id="date" class="text-black/60">
-      01/01/24
-    </h3>
-
+    <h3 id="date" class="text-black/60">01/01/24</h3>
   </div>
 
   <Image
@@ -30,10 +29,9 @@ import card from "../assets/hero.jpg";
 
   <!-- Description -->
   <div class="p-4 space-y-5 text-center sm:text-start">
-    <h2
-      class="hover:text-sky-500 text-xl font-bold leading-9"
-    >
-      <a class="hover:underline" href="/"> Two For One Drinks </a>
+    <h2 class="hover:text-sky-500 text-xl font-bold leading-9">
+      <!-- dynamic route leading to it's seperate page -->
+      <a class="hover:underline" href="/event"> Two For One Drinks </a>
     </h2>
 
     <!-- 200 char limit -->
@@ -43,9 +41,22 @@ import card from "../assets/hero.jpg";
       development. sdklfja fjf lkfkl jfklj jlkasd lksd jf
     </p>
 
-    <!-- filters -->
-    <button class="w-full text-start pt-4 p-2 text-sky-700/80 hover:underline">
-      Food & Drink
-    </button>
+    <div class="flex flex-wrap gap-2">
+      <span
+        class="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-600"
+      >
+        Drinks
+      </span>
+      <span
+        class="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-600"
+      >
+        Happy Hour
+      </span>
+      <span
+        class="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-600"
+      >
+        Social
+      </span>
+    </div>
   </div>
 </div>

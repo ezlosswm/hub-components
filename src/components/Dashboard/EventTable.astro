@@ -2,11 +2,12 @@
 import Table from "./Table.astro";
 
 import { Icon } from "astro-icon/components";
+
 import { Image } from "astro:assets";
 import pic from "../../assets/hero.jpg";
 ---
 
-<table class="w-full table-auto">
+<table class="w-full table-fixed">
   <thead>
     <tr>
       <th class="border-r p-1"> Cover </th>
@@ -25,8 +26,9 @@ import pic from "../../assets/hero.jpg";
     <!-- space -->
     <!-- this is gonna be the form when clicking the edit button
      htmx -->
-     <tr class="text-sm hover:text-black/65">
+    <tr class="text-sm hover:text-black/65">
       <td class="p-1">
+        <!-- fix the alt -->
         <Image class="mx-auto size-12 rounded-full" src={pic} alt="Bubble" />
       </td>
       <td class="p-1 space-y-1">
@@ -98,10 +100,5 @@ import pic from "../../assets/hero.jpg";
         </span>
       </td>
     </tr>
-
-    <!-- space -->
-    <!-- space -->
-    <!-- space -->
-    <!-- space -->
   </tbody>
 </table>

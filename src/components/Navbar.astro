@@ -7,13 +7,14 @@ import { Icon } from "astro-icon/components";
   id="header"
   class="h-24 flex items-center shadow-sm fixed inset-x-0 top-0 z-20 px-8 py-4 bg-white"
 >
-  <nav class="w-full max-w-5xl mx-auto">
+  <nav aria-label="Main navigation" class="w-full max-w-7xl mx-auto">
     <div id="desktop__menu" class="flex items-center justify-between">
       <a
         class="text-xl sm:text-2xl font-bold flex space-x-2 items-center"
         href="/"
       >
         <svg
+          aria-label="Logo"
           class="size-12 sm:size-16"
           viewBox="0 0 641 539"
           version="1.1"
@@ -98,18 +99,16 @@ import { Icon } from "astro-icon/components";
       </a>
 
       <Icon
+        aria-label="Toggle mobile menu"
         id="menu__btn"
-        class="sm:hidden cursor-pointer h-auto w-6"
+        class="sm:hidden cursor-pointer size-6"
         name="ri:menu-2-line"
       />
 
       <div class="hidden sm:flex items-center justify-center space-x-5">
-        <!--a class="btn" href="/">Home</a-->
-        <!--a class="btn" href="/">Home</a-->
-
         <a
           href="/contact"
-          class="rounded-lg px-4 py-2 font-semibold shadow-sm bg-gray-800 text-white hover:bg-transparent hover:border hover:border-gray-900 hover:text-black"
+          class="rounded-md bg-gray-900 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
           >Contact Us</a
         >
       </div>
@@ -117,6 +116,7 @@ import { Icon } from "astro-icon/components";
 
     <!-- mobile menu -->
     <nav
+      aria-label="Mobile Navigation"
       id="mobile__menu"
       class="hidden fixed w-full inset-y-0 top-0 bg-black/85 text-white transform -x-translate-full transition-transform z-50"
     >
@@ -129,6 +129,7 @@ import { Icon } from "astro-icon/components";
             href="/"
           >
             <svg
+              aria-label="Logo"
               class="size-12 sm:size-16 fill-red-400"
               viewBox="0 0 641 539"
               version="1.1"
@@ -221,6 +222,7 @@ import { Icon } from "astro-icon/components";
           </a>
 
           <Icon
+            aria-label="Close menu"
             id="close__btn"
             class="hidden cursor-pointer h-auto w-8 fixed top-6 right-6"
             name="ri:close-line"
@@ -232,7 +234,7 @@ import { Icon } from "astro-icon/components";
           <!--a class="rounded-lg px-4 py-2 font-semibold shadow-sm" href="/">Home</a-->
           <a
             href="/contact"
-            class="rounded-lg px-4 py-2 font-semibold shadow-sm bg-white text-gray-900 hover:bg-transparent hover:border hover:border-white hover:text-white"
+            class="rounded-md bg-gray-900 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
             >Contact Us</a
           >
         </div>

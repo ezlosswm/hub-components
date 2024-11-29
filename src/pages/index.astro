@@ -1,24 +1,13 @@
 ---
-import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+
 import Banner from "../components/Banner.astro";
 import OrganizationList from "../components/Dashboard/Organizer/OrganizationList.astro";
 import GridArea from "../components/GridArea.astro";
-import Footer from "../components/Footer.astro";
 ---
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Hub Components - Home</title>
-  </head>
-  <body class="min-h-screen w-screen bg-gray-50">
-    <Navbar />
-
+<Layout>
     <!-- Hero Section -->
-    <div class="relative isolate w-full px-4 pt-14 lg:px-8">
+    <div class="relative isolate w-full px-4 lg:px-8">
       <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div class="text-center">
           <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -28,11 +17,8 @@ import Footer from "../components/Footer.astro";
             Your one-stop solution for managing organizations and events
           </p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a href="/register" class="rounded-md bg-gray-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
-              Get started
-            </a>
-            <a href="/contact" class="text-sm font-semibold leading-6 text-gray-900">
-              Contact us <span aria-hidden="true">→</span>
+            <a href="/contact" aria-label="Contact us" class="rounded-md bg-gray-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
+              Contact us <span aria-hidden="true" aria-label="Right arrow">→</span>
             </a>
           </div>
         </div>
@@ -43,10 +29,16 @@ import Footer from "../components/Footer.astro";
     <main class="relative w-full max-w-7xl mx-auto sm:px-6 lg:px-8 py-12">
       <div class="grid lg:grid-cols-3 gap-8">
         <!-- Organizations Section -->
-        <div class="lg:col-span-2">
-          <h2 class="text-2xl font-bold mb-2 pl-4">All Organizers</h2>
-          <OrganizationList />
-          <GridArea />
+        <div class="lg:col-span-2 space-y-7">
+          <div>
+              <h2 class="text-2xl font-bold mb-2 pl-4">All Organizers</h2>
+              <OrganizationList />
+          </div>
+
+          <div>
+              <h2 class="text-2xl font-bold mb-2 pl-4">All Events</h2>
+              <GridArea />
+          </div>
         </div>
 
         <!-- Sidebar -->
@@ -62,7 +54,4 @@ import Footer from "../components/Footer.astro";
         </aside>
       </div>
     </main>
-
-    <Footer />
-  </body>
-</html>
+</Layout>

@@ -1,0 +1,17 @@
+---
+import Base from './Base.astro';
+import DashboardHeader from '../components/Dashboard/DashboardHeader.astro';
+import DashboardNav from '../components/Dashboard/DashboardNav.astro';
+---
+
+<Base>
+    <DashboardHeader />
+
+    <div class="flex">
+      <DashboardNav />
+
+      <div class="mx-auto flex-2">
+        <slot />
+      </div>
+    </div>
+</Base>

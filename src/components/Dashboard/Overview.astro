@@ -1,0 +1,55 @@
+---
+import { Icon } from "astro-icon/components";
+---
+<!-- Stats Overview -->
+<div class="w-full max-w-4xl mx-auto sm:px-6 lg:px-8">
+    <div class="grid gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div class="bg-white overflow-hidden shadow rounded-lg">
+                <div class="p-2">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-gray-500/10 rounded-md p-3">
+                            <Icon name="mdi:calendar" class="size-6 text-gray-600" />
+                        </div>
+                        <div class="ml-5 w-0 flex-1">
+                            <dl>
+                                <dt class="text-sm font-medium text-gray-500 truncate">Start Date</dt>
+                                <dd class="text-lg font-semibold text-gray-900">10-10-10</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white overflow-hidden shadow rounded-lg">
+                <div class="p-2">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-gray-500/10 rounded-md p-3">
+                            <Icon name="mdi:clock-outline" class="size-6 text-gray-600" />
+                        </div>
+                        <div class="ml-5 w-0 flex-1">
+                            <dl>
+                                <dt class="text-sm font-medium text-gray-500 truncate">Recurrence</dt>
+                                <dd class="text-lg font-semibold text-gray-900">Annual</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white overflow-hidden shadow rounded-lg">
+                <div class="p-2">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-gray-500/10 rounded-md p-3">
+                            <Icon name="mdi:location" class="size-6 text-gray-600" />
+                        </div>
+                        <div class="ml-5 w-0 flex-1">
+                            <dl>
+                                <dt class="text-sm font-medium text-gray-500 truncate">Location</dt>
+                                <dd class="text-lg font-semibold text-gray-900">Battyman Landia</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

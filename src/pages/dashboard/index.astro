@@ -1,0 +1,21 @@
+---
+import DashboardLayout from "../../layouts/DashboardLayout.astro";
+
+import Results from "../../components/Results.astro";
+import EventTable from "../../components/Dashboard/EventTable.astro";
+---
+
+<DashboardLayout>
+  <!-- Search Results -->
+  <div class="bg-white shadow rounded-lg">
+    <Results />
+  </div>
+
+  <!-- Event Table -->
+  <div class="max-w-8xl mx-auto bg-white shadow rounded-lg overflow-hidden">
+    <div class="px-6 py-5 border-b border-gray-200">
+      <h2 class="text-lg font-medium text-gray-900">Events</h2>
+    </div>
+    <EventTable />
+  </div>
+</DashboardLayout>
